@@ -1,7 +1,8 @@
 <?php
-
+// routes/web.php
+use App\Http\Controllers\HelloController;
 use Illuminate\Support\Facades\Route;
-
 Route::get('/', function () {
-    return view('welcome');
+return view('welcome');
 });
+Route::get('/hello/{name?}', HelloController::class)->name('hello');
